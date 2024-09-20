@@ -6,7 +6,7 @@
 # indexing strings -- slide 4
 my_text = 'this is a text '
 result = my_text  #get the index of the letter a
-print(result[5:-2])
+print(result[5:9])
 # -1 is the last letter of the string
 # -2 is the second to last letter
 #get the index of the third letter from the end of the text
@@ -16,14 +16,64 @@ print(result[5:-2])
 ###slide 5
 # string[start:stop:step]
 #example
-# text = "Hello, World!"
-# print(text[7:12])  # prints "World"
+text = "Hello, World!"
+print(text[7:12])  # prints "World"
+print(text[0:5]) # prints "Hello"
+print(text[2:5]) # prints "llo"
+print(text[-1]) # prints "!"
+print(text[-3]) # prints "l" of "World"
+print(text[::-1]) # reverses sentence
+print(text[0:-1:2]) # skips every second letter
+print(text[0:-1:3]) # skips every third letter
 text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 # Get the substring CDE and put in a variable
+substring = text.find("CDE")
+print(substring)
+substring = text[2:5]
+print(substring)
 
+substring = text.find("RST")
+print(substring)
+substring = text[17:20]
+print(substring)
+
+substring = text.find("H")
+print(substring)
+substring = text.find("T")
+print(substring)
+substring = text[7:20]
+print(substring)
 #get the first letter all the way to the 4th letter
-
+print(text[0:4])
 #get the first letter to the final letter and skip every 3rd letter
+
+sentence = "especially in electronic communications, writing in all caps is equivelent to yelling"
+indexSen = sentence.find("communications")
+print(indexSen)
+print(sentence[25:38].upper()) # prints in all caps
+
+sentence2 = "SIMPLE IS ALWAYS BETTER THAN COMPLEX"
+print(sentence2.lower()) # prints in lower case
+
+word_list = ["Simple","is","better","than","complex"]
+joined_list = " ".join(word_list)
+print(joined_list)
+
+sentence = "If the implementation is hard to explain, it might be a bad idea."
+#split the sentence into a list
+split_sentence = sentence.split() # splits a string into a list
+print(split_sentence)
+
+sentence3 = "try to be a rainbow in someone's cloud"
+split_sentence3 = sentence3.split()
+print(split_sentence3)
+
+sentence4 = "If the implementation is hard to explain, it might be a bad idea."
+new_sentence = sentence4.replace("hard", "easy").replace("bad","good")
+print(new_sentence)
+
+repetition = "Repetition" * 15
+print(repetition)
 
 # Built-in methods:
 # Python has a variety of built-in methods to work with substrings.
